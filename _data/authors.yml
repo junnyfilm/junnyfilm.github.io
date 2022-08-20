@@ -9,8 +9,11 @@ author1:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
     Data Scientist, Master Student of Mechanical Engineering at Seoul National University
-    Interest : Deep learning, Anomaly detection, Multi modal, Domain Adaptation
-
+    Interest
+    - Deep learning
+    - Anomaly detection
+    - Multi modal
+    - Domain Adaptation
 
   # This photo will be used in the about section
   picture:
