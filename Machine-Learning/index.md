@@ -5,5 +5,5 @@ slug: machinelearning
 description: >
      This folder contains machine learning concepts and practice.
 menu: true
-order: 4
+order: 3
 ---

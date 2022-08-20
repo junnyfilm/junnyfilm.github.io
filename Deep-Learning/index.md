@@ -5,5 +5,5 @@ slug: deeplearning
 description: >
      This folder contains deep learning concepts and practice.
 menu: true
-order: 3
+order: 4
 ---
