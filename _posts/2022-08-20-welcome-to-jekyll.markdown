@@ -4,7 +4,7 @@ title:  "Welcome to My Blog"
 date:   2022-08-20 18:27:46 +0900
 categories: jekyll update
 image: 
-  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
+  path: /assets/img/blog/intro.jpg
 ---
 Hi everyone, nice to meet you! 😀
 
