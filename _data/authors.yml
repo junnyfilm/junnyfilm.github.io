@@ -21,9 +21,9 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
+    # twitter:         <username>
     github:          <username>
-    # email:           <mail@domain.tld>
+    email:           <ojune575@snu.ac.kr>
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
@@ -52,7 +52,7 @@ author1:
     # npm:             <username>
     # hackernews:      <username>
     # trello:          <firstnamelastname>
-    # linkedin:        <firstname-lastname-string>
+    linkedin:        <혜준-오-string>
     # xing:            <firstname_lastname_counter>
     # blogger:         <number>
     # delicious:       <username>
