@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to My Blog"
 date:   2022-08-20 18:27:46 +0900
-categories: jekyll update
+categories: Intro
 image: 
   path: /assets/img/blog/intro.jpg
 ---
