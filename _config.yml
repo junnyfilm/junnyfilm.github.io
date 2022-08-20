@@ -49,8 +49,8 @@ author:
 
 # Add links to the sidebar.
 menu:
-- title:               Intro
-    url:               /Intro/
+# - title:               Intro
+#     url:               /Intro/
   - title:             CV
     url:               /CV/
   - title:             Project
