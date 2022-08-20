@@ -15,5 +15,4 @@ My research focus is on Prognostic Health Management (PHM) which is a field of d
 
 This blog will cover practice on machine learning, deep learning, and statistics, and will review papers in the field of deep learning that I am currently studying.
 And also i will present some of my scientific research and write about things that i find interesting,mostly related to data science.
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
 
