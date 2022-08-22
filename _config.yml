@@ -49,13 +49,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-# - title:               Intro
-#     url:               /Intro/
 
   - title:             Project
     url:               /Project/
-  # - title:             Machine Learning
-  #   url:               /MachineLearning/
+
   - title:             Deep Learning
     url:               /DeepLearning/
 
