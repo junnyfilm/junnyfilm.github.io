@@ -51,8 +51,7 @@ author:
 menu:
 # - title:               Intro
 #     url:               /Intro/
-  - title:             CV
-    url:               /CV/
+
   - title:             Project
     url:               /Project/
   # - title:             Machine Learning
@@ -306,6 +305,7 @@ collections:
   projects:
     permalink:         /projects/:path/
     output:            true
+  
 
 
 # File inclusion/exclusion
