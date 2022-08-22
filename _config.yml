@@ -51,8 +51,8 @@ author:
 menu:
 # - title:               Intro
 #     url:               /Intro/
-  # - title:             CV
-  #   url:               /CV/
+  - title:             CV
+    url:               /CV/
   - title:             Project
     url:               /Project/
   # - title:             Machine Learning
@@ -94,7 +94,7 @@ remote_theme: hydecorp/hydejack@v9
  
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/background.jpg
-# accent_color:          rgb(79,177,186)
+accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
