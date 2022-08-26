@@ -53,9 +53,9 @@ menu:
   - title:             Project
     url:               /Project/
   - title:             Deep Learning
-    url:               /Deep_Learning/
+    url:               /deep-learning/
   - title:             Machine Learning
-    url:               /Machine_Learning/
+    url:               /machine-learning/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..

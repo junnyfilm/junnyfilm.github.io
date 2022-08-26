@@ -1,15 +1,13 @@
 ---
+# file: !my-blog.md
 layout: list
-title: <Deep Learning>
-slug: <Deep_Learning>
+title: deep-learning
+slug: deep-learning
 menu: true
-permalink: /<Deep_Learning>/
+permalink: /deep-learning/
 order: 2
 sitemap: false
 description: >
     Deep Learning Topics and Practices
-# accent_color: rgb(38,139,210)
-# accent_image:
-#   background: rgb(32,32,32)
-#   overlay:    false
 ---
+
