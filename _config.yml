@@ -51,12 +51,11 @@ author:
 menu:
 
   - title:             Project
-    url:               /project/
-
+    url:               /Project/
   - title:             Deep Learning
-    url:               /deeplearning/
+    url:               /Deep_Learning/
   - title:             Machine Learning
-    url:               /machinelearning/
+    url:               /Machine_Learning/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
