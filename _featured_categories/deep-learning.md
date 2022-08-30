@@ -5,7 +5,7 @@ title: deep-learning
 slug: deep-learning
 menu: true
 permalink: /deep-learning/
-order: 2
+order: 3
 sitemap: false
 description: >
     Deep Learning Topics and Practices
