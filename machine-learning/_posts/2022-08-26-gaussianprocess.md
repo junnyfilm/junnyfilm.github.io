@@ -21,7 +21,7 @@ tag: [machinelearning]
 
 ### When the random variable corresponding to index x1,x2,...,xm is fi=f(xi), all possible subsets {f1},{f2,f3},...,{f1,f2,fm} are processes with combined Gaussian distributions
 
-### The vector f1:m=[f1f2...] with fi as its component.fm]T is a process in which it is a random vector. Here, since m is the number of indexes arbitrarily selected in the process, the Gaussian random vector may have an infinite dimension. In other words, the Gaussian process may be described as an infinite dimensional extension of the Gaussian random vector
+### The vector f1:m=[f1,f2...] with fi as its component.fm]T is a process in which it is a random vector. Here, since m is the number of indexes arbitrarily selected in the process, the Gaussian random vector may have an infinite dimension. In other words, the Gaussian process may be described as an infinite dimensional extension of the Gaussian random vector
 
 ### Just as the characteristics of Gaussian random vectors are expressed by means and covariance, the Gaussian process can also be characterized by the mean function μ(x) and covariance k(x,x').
  ![p2](../img/gaussianprocess/p2.png)
@@ -106,7 +106,7 @@ tag: [machinelearning]
 ### Estimate the function g(x)=cos((x) as a Gaussian process f(x) as an example
 ### Assume that g(x) is an unknown function
 ### Assume a Gaussian with a mean of 0 and variance of 이n2 = 10-4
-### The dataset is D={(xi,yi), i=1,...,5} at x1=-4, x2=-3, x3=-2, x4=-1, x5=4 
+### The dataset is D=₩(xi,yi), i=1,...,5} at x1=-4, x2=-3, x3=-2, x4=-1, x5=4 
    ![p19](../img/gaussianprocess/p19.png)
 ```python
 # true function
@@ -134,7 +134,7 @@ return np.exp(-.5 * sqdist / lam2)
 K = kernel(X, X)
 ```
 
-### Specify 50 test inputs x={x1,...,xp} at regular intervals in the [-5,5] range
+### Specify 50 test inputs x=(x1,...,xp) at regular intervals in the [-5,5] range
 ```python
 p = 50 
 # number of test points 
@@ -177,7 +177,7 @@ Sig = K2star - np.dot(Lstar.T, Lstar)
   ```python
 mu_pos = np.dot(Lstar.T, np.linalg.solve(L, y))
 ```
-### Plot the mean value of y 의 and the 3-standard deviation (3)) at the test input x={{x1,...,xp} calculated by expression (8), as follows:
+### Plot the mean value of y 의 and the 3-standard deviation (3)) at the test input x={x1,...,xp} calculated by expression (8), as follows:
    ![p27](../img/gaussianprocess/p27.png)
 
 ### The standard deviation of the data-intensive area (between -4 and -1) is less than that of the data-free area (between 0 and 4)
