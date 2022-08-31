@@ -134,7 +134,7 @@ return np.exp(-.5 * sqdist / lam2)
 K = kernel(X, X)
 ```
 
-### Specify 50 test inputs x={{x1,...,xp} at regular intervals in the [-5,5] range
+### Specify 50 test inputs x={x1,...,xp} at regular intervals in the [-5,5] range
 ```python
 p = 50 
 # number of test points 
