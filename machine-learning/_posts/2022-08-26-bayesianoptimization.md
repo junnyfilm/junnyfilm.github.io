@@ -2,7 +2,7 @@
 layout: post
 title:  Bayesian Optimization
 date:   2022-08-26 16:06:59 +0900
-tag: [timeseries]
+tag: [machinelearning]
 ---
 # Bayesian Optimization
 
