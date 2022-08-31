@@ -83,8 +83,11 @@ Acquisition functions consist of exploitation and exploration strategies. Exploi
 
 ### Improvement probability function
 - The improvement probability function is the probability of deriving a function value greater than the maximum output value found so far.
+     ![p11](../img/bayesian/p11.png)
 
   
 ### Improvement Expectation Function
 - The most widely used acquisition function, the improvement expectation function, represents the degree of renewal of the expected function value by exploring a new solution
+     ![p12](../img/bayesian/p12.png)
+
 - The expected value is positive if the new year f(xnew) is better than the best year max(f(xi)) that has been explored so far; otherwise, nothing improves, so it becomes zero
