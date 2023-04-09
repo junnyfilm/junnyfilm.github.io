@@ -27,4 +27,4 @@ tag: [CNN]
  ![p1](../img/hrd/hrd18.jpg)
  ![p1](../img/hrd/hrd19.jpg)
 
-
+ 
