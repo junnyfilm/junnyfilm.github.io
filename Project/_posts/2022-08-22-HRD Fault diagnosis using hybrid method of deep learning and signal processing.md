@@ -217,9 +217,18 @@ feature_extractor3 = Feature_extractor3().to(device)
 SimpleConvmodel = SimpleConv().to(device)
 
 '''
+## Deep learning model
+The final model is as follows. A feature map was obtained by concatenate the features obtained by applying module 1 combining depth wise convolution and multi-scale convolution for each sensor. This was classified through a classifier to which the multi-scale convolution module2 and linear classifers
 
  ![hrd6](../img/hrd/hrd6.png)
- '''
+
+
+## Metric learning(Triplet loss)
+The model is learned based on metric learning, and we used triplet loss function. Unlike general labels, the data loader is constructed of three columns: anchor, positive, and negative. Anchor is the reference sample, positive is the sample which have the same label with anchor, and the negative is the sample which have the different label with anchor, they all extracted randomly. It is combined with margin based on Euclidean distance to calculate the loss function. Through this metric learning, anchor and positive sample pull each other and anchor and negative sample push each other. This loss function is calculated for the first feature map.
+
+
+ ![hrd7](../img/hrd/hrd7.png)
+  '''
  class TripletCustomdataset(Dataset):
     def __init__(self, data, label):
         # self.data=data   
@@ -280,10 +289,12 @@ class TripletLoss(nn.Module):
     
 tripletloss=TripletLoss()
 
-
  '''
 
- ![hrd7](../img/hrd/hrd7.png)
+ ## Domain adaptation
+Because of domain discrepancy between each individual dataset, we have to consider the domain adaptation technique. We used Deep coral function for domain adaptation. This method align the covariance of each domain to minimize domain shift. And this function is calculated at Global averaged pooling layer.
+
+ ![hrd8](../img/hrd/hrd8.png)
  '''
  def CORAL(source, target):
     d = source.data.shape[1]
@@ -315,7 +326,9 @@ def alpha_weight(step):
 
  '''
 
- ![hrd8](../img/hrd/hrd8.png)
+## Pseudo labeling
+Although it obtained almost 99.9% accuracy in the previous step, it was decided to use data from the target domain to obtain higher accuracy. So we used the pseudo labeling method. This method assign the temporary label to target data and using this target data, retrain the model every 50 batch idx. Through this method, we can get 100% accuracy for both individual 7 and 8 dataset.
+
  ![hrd9](../img/hrd/hrd9.png)
  '''
  def train_target(extractor1,extractor2,extractor3,classifier, criterion, dataloader,tdataloader,triplet_loader, optimizer, epoch, step):
