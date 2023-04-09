@@ -29,8 +29,8 @@ CNN-based models have gone through a sliding process because they always require
 
 '''
  class customdataset(Dataset):
-    def __init__(self, data, label): 
-        super().__init__()
+    def _init__(self, data, label): 
+        super()._init__()
         self.pin_data=data[:,0,:].unsqueeze(1)   
         self.po_data=data[:,1,:].unsqueeze(1)
         self.pdin_data=data[:,2,:].unsqueeze(1)
@@ -80,11 +80,10 @@ We changed the structure of the encoder of the deep learning model. The depth-wi
 
 '''
  class GlobalAvgPool(nn.Module):
-    def __init__(self):
-        super(GlobalAvgPool,self).__init__()
+    def _init__(self):
+        super(GlobalAvgPool,self)._init__()
     def forward(self,x):
         return x.mean(axis=-1) 
-    
 class Feature_extractor1(nn.Module):
 
     def __init__(self):
@@ -230,7 +229,7 @@ The model is learned based on metric learning, and we used triplet loss function
  ![hrd7](../img/hrd/hrd7.png)
 '''
  class TripletCustomdataset(Dataset):
-    def __init__(self, data, label):
+    def _init__(self, data, label):
         # self.data=data   
         self.pin_data=data[:,0,:].unsqueeze(1)   
         self.po_data=data[:,1,:].unsqueeze(1)
@@ -272,8 +271,8 @@ def tripletloader(data,label):
     return triplet__dataloader
 
 class TripletLoss(nn.Module):
-    def __init__(self, margin=1.0):
-        super(TripletLoss, self).__init__()
+    def _init__(self, margin=1.0):
+        super(TripletLoss, self)._init__()
         self.margin = margin
         
     def calc_euclidean(self, x1, x2):
