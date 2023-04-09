@@ -58,6 +58,7 @@ def loaders(data,label, data2,label2):
  ```
 
  ![hrd5](../img/hrd/hrd5.png)
+
  '''
  class GlobalAvgPool(nn.Module):
     def __init__(self):
