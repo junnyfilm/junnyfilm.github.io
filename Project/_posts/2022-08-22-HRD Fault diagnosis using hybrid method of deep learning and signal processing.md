@@ -27,7 +27,7 @@ CNN-based models have gone through a sliding process because they always require
 
  ![hrd4](../img/hrd/hrd4.png)
 
- ```
+'''
  class customdataset(Dataset):
     def __init__(self, data, label): 
         super().__init__()
@@ -71,14 +71,14 @@ def loaders(data,label, data2,label2):
     testdataset = customdataset(data2, label2)
     testloader = DataLoader(testdataset, batch_size=1, shuffle=False, drop_last=False )
     return traindataloader1,validdataloader1,testloader
- ```
+'''
 
 ## Depthwise based cnn encoder
 We changed the structure of the encoder of the deep learning model. The depth-wise convolution structure is used, and since it is extracted separately for each channel, sensor&class specific information can be extracted more, and the number of parameters can be reduced compared to the existing model, preventing overfitting.
 
  ![hrd5](../img/hrd/hrd5.png)
 
- '''
+'''
  class GlobalAvgPool(nn.Module):
     def __init__(self):
         super(GlobalAvgPool,self).__init__()
@@ -228,7 +228,7 @@ The model is learned based on metric learning, and we used triplet loss function
 
 
  ![hrd7](../img/hrd/hrd7.png)
-  '''
+'''
  class TripletCustomdataset(Dataset):
     def __init__(self, data, label):
         # self.data=data   
@@ -289,13 +289,13 @@ class TripletLoss(nn.Module):
     
 tripletloss=TripletLoss()
 
- '''
+'''
 
  ## Domain adaptation
 Because of domain discrepancy between each individual dataset, we have to consider the domain adaptation technique. We used Deep coral function for domain adaptation. This method align the covariance of each domain to minimize domain shift. And this function is calculated at Global averaged pooling layer.
 
  ![hrd8](../img/hrd/hrd8.png)
- '''
+'''
  def CORAL(source, target):
     d = source.data.shape[1]
 
@@ -324,13 +324,14 @@ def alpha_weight(step):
     else:
          return ((step-T1) / (T2-T1))*af
 
- '''
+'''
 
 ## Pseudo labeling
 Although it obtained almost 99.9% accuracy in the previous step, it was decided to use data from the target domain to obtain higher accuracy. So we used the pseudo labeling method. This method assign the temporary label to target data and using this target data, retrain the model every 50 batch idx. Through this method, we can get 100% accuracy for both individual 7 and 8 dataset.
 
  ![hrd9](../img/hrd/hrd9.png)
- '''
+
+'''
  def train_target(extractor1,extractor2,extractor3,classifier, criterion, dataloader,tdataloader,triplet_loader, optimizer, epoch, step):
     
     # setup models
@@ -437,7 +438,7 @@ Although it obtained almost 99.9% accuracy in the previous step, it was decided 
         if (batch_idx + 1) % 100 == 0:
             print('[{}/{} ({:.0f}%)]\t pseudo Loss: {:.6f}'.format(batch_idx * len(signal1), len(dataloader.dataset),100. * batch_idx / len(dataloader), loss.item()))
             # total_loss.append(loss.item())
- '''
+'''
  ![hrd10](../img/hrd/hrd10.png)
  ![hrd11](../img/hrd/hrd11.png)
  ![hrd12](../img/hrd/hrd12.png)
