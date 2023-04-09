@@ -26,6 +26,7 @@ Our proposed method is as follows. It is divided into deep learning based diagno
 CNN-based models have gone through a sliding process because they always require the same length of input. We cut and used the length from 0 to 556 for each data index. The reasons are as follows. First, when the accuracy of the learning set was checked by cross validation, the accuracy of the 0-556 section was better than other methods. The second class, which is not well distinguished by deep learning, was No. 1, No. 5, No. 4, No. 7, No. 9, and the previously mentioned physics-based model such as pressure drop was not related to this failure case. Especially when using the proposed method, the most important part is the presence term in the middle.
 
  ![hrd4](../img/hrd/hrd4.png)
+
  ```
  class customdataset(Dataset):
     def __init__(self, data, label): 
@@ -71,9 +72,10 @@ def loaders(data,label, data2,label2):
     testloader = DataLoader(testdataset, batch_size=1, shuffle=False, drop_last=False )
     return traindataloader1,validdataloader1,testloader
  ```
+
 ## Depthwise based cnn encoder
 We changed the structure of the encoder of the deep learning model. The depth-wise convolution structure is used, and since it is extracted separately for each channel, sensor&class specific information can be extracted more, and the number of parameters can be reduced compared to the existing model, preventing overfitting.
-
+
  ![hrd5](../img/hrd/hrd5.png)
 
  '''
