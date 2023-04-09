@@ -22,8 +22,11 @@ The data set is from 2022 PHM Society Data Challenge. We can use three types of 
  ![hrd2](../img/hrd/hrd2.png)
 
 ## Flow chart of proposed method
+Our proposed method is as follows. It is divided into deep learning based diagnostics and signal processing based diagnostics. In the first section, the modified version of cnn-based model was used, and overall fault diagnosis was performed using metric learning, domain adaptation, pseudo labeling, and ensemble learning. Here, uncertainty samples were extracted and verified with a signal processing based model.
  ![hrd3](../img/hrd/hrd3.png)
 
+## Data length problem
+CNN-based models have gone through a sliding process because they always require the same length of input. We cut and used the length from 0 to 556 for each data index. The reasons are as follows. First, when the accuracy of the learning set was checked by cross validation, the accuracy of the 0-556 section was better than other methods. The second class, which is not well distinguished by deep learning, was No. 1, No. 5, No. 4, No. 7, No. 9, and the previously mentioned physics-based model such as pressure drop was not related to this failure case. Especially when using the proposed method, the most important part is the presence term in the middle.
 
  ![hrd4](../img/hrd/hrd4.png)
  ```
@@ -71,7 +74,9 @@ def loaders(data,label, data2,label2):
     testloader = DataLoader(testdataset, batch_size=1, shuffle=False, drop_last=False )
     return traindataloader1,validdataloader1,testloader
  ```
-
+## Depthwise based cnn encoder
+We changed the structure of the encoder of the deep learning model. The depth-wise convolution structure is used, and since it is extracted separately for each channel, sensor&class specific information can be extracted more, and the number of parameters can be reduced compared to the existing model, preventing overfitting.
+
  ![hrd5](../img/hrd/hrd5.png)
 
  '''
