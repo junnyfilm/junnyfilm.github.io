@@ -14,7 +14,7 @@ HRD is used in many drilling operations like excavation and it is important in m
 
  ![hrd1](../img/hrd/hrd1.png)
 
- ## Data description
+## Data description
  - 8 different working conditions
  - 11 health conditions (fault type) information
  - 3 sensors information
