@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Depthwise Separable CNN
+title:  HRD Fault diagnosis using hybrid method 
 date:   2022-11-04 16:06:59 +0900
-tag: [CNN]
+tag: [Project]
 ---
 
 # HRD Fault diagnosis using hybrid method of deep learning and signal processing
