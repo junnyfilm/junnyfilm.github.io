@@ -7,9 +7,24 @@ tag: [Project]
 
 # HRD Fault diagnosis using hybrid method of deep learning and signal processing
 
+
+
+## Background of research
+HRD is used in many drilling operations like excavation and it is important in mining industry. As HRD frequently operates under harsh conditions, diverse failures modes occur and these makes potentials for personal injuries and economic losses. So, Reliable and prompt fault diagnosis method is needed to ensure safety from accidents
+
  ![hrd1](../img/hrd/hrd1.png)
+
+ ## Data description
+ - 8 different working conditions
+ - 11 health conditions (fault type) information
+ - 3 sensors information
+The data set is from 2022 PHM Society Data Challenge. We can use three types of pressure signal of HRD, Percussion pressure at inlet fitting, Damper pressure inside the outer chamber, Pressure in the volume behind the piston. there are many individuals from 1 to 8 where the data distributions are different to each other. And finally, there are 10 types of fault modes in HRD as you can see in the right table. There are some fault pairs that are really difficult to classify and it is also challenging. 
  ![hrd2](../img/hrd/hrd2.png)
+
+## Flow chart of proposed method
  ![hrd3](../img/hrd/hrd3.png)
+
+
  ![hrd4](../img/hrd/hrd4.png)
  ```
  class customdataset(Dataset):
